@@ -6,105 +6,117 @@ import { clearSession, getTenant, getToken, getUser, isAdmin } from "../lib/auth
 // Icons (inline SVG for zero dependencies)
 const IconPlus = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-    <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+    <line x1="12" y1="5" x2="12" y2="19" />
+    <line x1="5" y1="12" x2="19" y2="12" />
   </svg>
 );
+
 const IconSend = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-    <line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" />
+    <line x1="22" y1="2" x2="11" y2="13" />
+    <polygon points="22 2 15 22 11 13 2 9 22 2" />
   </svg>
 );
+
 const IconPaperclip = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-    <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+    <path d="M21.44 11.05l-8.49 8.49a5 5 0 0 1-7.07-7.07l9.19-9.19a3.5 3.5 0 0 1 4.95 4.95l-9.19 9.19a2 2 0 0 1-2.83-2.83l8.49-8.49" />
   </svg>
 );
-const IconLogout = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" />
-  </svg>
-);
-const IconSearch = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-    <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-  </svg>
-);
-const IconSettings = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-    <circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-  </svg>
-);
-const IconMessage = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-  </svg>
-);
+
 const IconEdit = () => (
-  <svg
-    width="18"
-    height="18"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 20h9" />
     <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
   </svg>
 );
 
+const IconLogout = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+    <polyline points="16 17 21 12 16 7" />
+    <line x1="21" y1="12" x2="9" y2="12" />
+  </svg>
+);
+
+const IconSettings = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+    <circle cx="12" cy="12" r="3" />
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+  </svg>
+);
+
+const IconMessage = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+    <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+  </svg>
+);
+
+function formatDateTime(ts) {
+  if (!ts) return "";
+  try {
+    const d = new Date(ts * 1000);
+    return d.toLocaleString("pt-BR", { hour12: false });
+  } catch {
+    return "";
+  }
+}
+
 export default function AppConsole() {
   const nav = useNavigate();
-  const token = getToken();
-  const user = getUser();
-  const [tenant] = useState(getTenant());
-  const [health, setHealth] = useState("...");
-  
-  // Threads & Messages
+  const [tenant, setTenant] = useState(getTenant() || "public");
+  const [token, setToken] = useState(getToken());
+  const [user, setUser] = useState(getUser());
+  const [health, setHealth] = useState("checking");
+
   const [threads, setThreads] = useState([]);
   const [threadId, setThreadId] = useState("");
   const [messages, setMessages] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
-  
-  // Composer
-  const [text, setText] = useState("");
   const [agents, setAgents] = useState([]);
-  const [agentId, setAgentId] = useState(() => localStorage.getItem('orkio_agent_id') || '');
-  const [listening, setListening] = useState(false);
-  const [speechSupported, setSpeechSupported] = useState(false);
-  const recogRef = useRef(null);
-  const baseTextRef = useRef("");
-  const interimTextRef = useRef("");
-
+  const [text, setText] = useState("");
   const [sending, setSending] = useState(false);
-  const textareaRef = useRef(null);
-  const fileInputRef = useRef(null);
-  const messagesEndRef = useRef(null);
-  
-  // Upload
+
   const [uploadStatus, setUploadStatus] = useState("");
   const [uploadProgress, setUploadProgress] = useState(false);
+  const fileInputRef = useRef(null);
 
-  // Redirect if not logged in
+  const messagesEndRef = useRef(null);
+  const textareaRef = useRef(null);
+
+  // Speech (opcional)
+  const [speechSupported] = useState(!!(window.SpeechRecognition || window.webkitSpeechRecognition));
+  const speechRef = useRef(null);
+  const [listening, setListening] = useState(false);
+
   useEffect(() => {
-    if (!token) nav("/auth");
-  }, [token, nav]);
+    const t = getToken();
+    const u = getUser();
+    setToken(t);
+    setUser(u);
+    if (!t) nav("/auth");
+  }, []);
 
-  // Load health
   useEffect(() => {
     async function checkHealth() {
       try {
-        const res = await fetch((window.__ORKIO_ENV__?.VITE_API_BASE_URL || import.meta.env.VITE_API_BASE_URL || "") + "/api/health");
-        const j = await res.json();
-        setHealth(j?.status === "ok" ? "ok" : "down");
+        const res = await apiFetch("/api/health", { token, org: tenant });
+        if (res) setHealth("ok");
       } catch {
         setHealth("down");
       }
     }
     checkHealth();
-  }, []);
+  }, [token, tenant]);
+
+  function scrollToBottom() {
+    try {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    } catch {}
+  }
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   // Load threads
   async function loadThreads() {
@@ -114,6 +126,31 @@ export default function AppConsole() {
       if (!threadId && data?.[0]?.id) setThreadId(data[0].id);
     } catch (e) {
       console.error("loadThreads error:", e);
+      // Se for 401, força re-login
+      if ((e?.message || "").toLowerCase().includes("401")) {
+        clearSession();
+        nav("/auth");
+      }
+    }
+  }
+
+  // Rename thread (evita ReferenceError)
+  async function renameThread(tid) {
+    const t = threads.find((x) => x.id === tid);
+    const current = t?.title || "Nova conversa";
+    const next = prompt("Renomear conversa:", current);
+    if (!next) return;
+    try {
+      await apiFetch(`/api/threads/${encodeURIComponent(tid)}`, {
+        method: "PATCH",
+        token,
+        org: tenant,
+        body: { title: next },
+      });
+      await loadThreads();
+    } catch (e) {
+      console.error("renameThread error:", e);
+      alert(e?.message || "Falha ao renomear");
     }
   }
 
@@ -133,248 +170,381 @@ export default function AppConsole() {
     try {
       const { data } = await apiFetch("/api/agents", { token, org: tenant });
       setAgents(data || []);
-      // If no agent selected, try to find default
-      if (!agentId && data?.length) {
-        const defaultAgent = data.find(a => a.is_default);
-        if (defaultAgent) {
-          setAgentId(defaultAgent.id);
-          localStorage.setItem('orkio_agent_id', defaultAgent.id);
-        }
-      }
     } catch (e) {
       console.error("loadAgents error:", e);
     }
   }
 
-  useEffect(() => { loadThreads(); loadAgents(); }, [tenant]);
-  useEffect(() => { if (threadId) loadMessages(threadId); }, [threadId]);
-
-  // Scroll to bottom when messages change
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+    if (!token) return;
+    loadThreads();
+    loadAgents();
+  }, [token, tenant]);
 
-  // Auto-resize textarea
   useEffect(() => {
-    if (textareaRef.current) {
-      textareaRef.current.style.height = "auto";
-      textareaRef.current.style.height = Math.min(textareaRef.current.scrollHeight, 200) + "px";
-    }
-  }, [text]);
+    if (!threadId) return;
+    loadMessages(threadId);
+  }, [threadId]);
 
   // Create new thread
   async function createThread() {
     try {
-      const { data } = await apiFetch("/api/threads", { method: "POST", token, org: tenant, body: { title: "Nova conversa" } });
-      setThreads([data, ...threads]);
-      setThreadId(data.id);
-      setMessages([]);
+      const { data } = await apiFetch("/api/threads", {
+        method: "POST",
+        token,
+        org: tenant,
+        body: { title: "Nova conversa" },
+      });
+      if (data?.id) {
+        await loadThreads();
+        setThreadId(data.id);
+      }
     } catch (e) {
       console.error("createThread error:", e);
+      alert(e?.message || "Falha ao criar conversa");
     }
   }
 
-  // Send message
-  async function send() {
-    const msg = text.trim();
-    if (!msg || sending) return;
-    
-    setSending(true);
-    setText("");
-    
-    // Optimistic update - show user message immediately
-    const tempUserMsg = { id: "temp-user-" + Date.now(), role: "user", content: msg, created_at: Date.now() / 1000 };
-    setMessages(prev => [...prev, tempUserMsg]);
-    
+  // Upload file (agent upload endpoint)
+  async function doUpload(e) {
+    const f = e.target.files?.[0];
+    if (!f) return;
+    e.target.value = "";
     try {
-      const { data } = await chat({ thread_id: threadId || null, agent_id: agentId || null, message: msg, top_k: 6, token, org: tenant });
-      setThreadId(data.thread_id);
-      await loadMessages(data.thread_id);
-      await loadThreads(); // Refresh thread list in case new thread was created
+      setUploadProgress(true);
+      setUploadStatus("Enviando arquivo...");
+      await uploadFile(f, { token, org: tenant, agentId: null, intent: "chat" });
+      setUploadStatus("Arquivo enviado ✅");
+      setTimeout(() => setUploadStatus(""), 1200);
+    } catch (err) {
+      console.error("upload error", err);
+      setUploadStatus("Falha no upload.");
+      setTimeout(() => setUploadStatus(""), 2000);
+    } finally {
+      setUploadProgress(false);
+    }
+  }
+
+  function ensureSpeech() {
+    if (!speechSupported) return null;
+    if (speechRef.current) return speechRef.current;
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) return null;
+    const rec = new SR();
+    rec.lang = "pt-BR";
+    rec.interimResults = true;
+    rec.continuous = false;
+    speechRef.current = rec;
+    return rec;
+  }
+
+  function toggleMic() {
+    const rec = ensureSpeech();
+    if (!rec) return;
+    if (listening) {
+      try {
+        rec.stop();
+      } catch {}
+      setListening(false);
+      return;
+    }
+    let finalText = "";
+    rec.onresult = (evt) => {
+      let interim = "";
+      for (let i = evt.resultIndex; i < evt.results.length; i++) {
+        const transcript = evt.results[i][0].transcript;
+        if (evt.results[i].isFinal) finalText += transcript;
+        else interim += transcript;
+      }
+      setText((prev) => (finalText || interim || prev).trim());
+    };
+    rec.onend = () => setListening(false);
+    rec.onerror = () => setListening(false);
+    setListening(true);
+    try {
+      rec.start();
+    } catch {
+      setListening(false);
+    }
+  }
+
+  async function sendMessage() {
+    const msg = (text || "").trim();
+    if (!msg || sending) return;
+    setSending(true);
+
+    try {
+      const userMsg = {
+        id: `tmp-${Date.now()}`,
+        role: "user",
+        content: msg,
+        created_at: Math.floor(Date.now() / 1000),
+      };
+      setMessages((prev) => [...prev, userMsg]);
+      setText("");
+
+      const resp = await chat({
+        token,
+        org: tenant,
+        thread_id: threadId,
+        message: msg,
+        agent_id: null,
+      });
+
+      // resp.data or resp
+      const data = resp?.data || resp;
+      // Recarrega mensagens para garantir consistência
+      await loadMessages(threadId);
+
+      if (data?.thread_id && data.thread_id !== threadId) {
+        setThreadId(data.thread_id);
+        await loadThreads();
+      }
     } catch (e) {
-      // Show error as assistant message
-      setMessages(prev => [...prev, { id: "error-" + Date.now(), role: "assistant", content: `❌ Erro: ${e.message}`, created_at: Date.now() / 1000 }]);
+      console.error("sendMessage error:", e);
+      alert(e?.message || "Falha ao enviar mensagem");
     } finally {
       setSending(false);
     }
   }
 
-  // Handle keyboard shortcuts
   function handleKeyDown(e) {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
-      send();
+      sendMessage();
     }
   }
 
-    function pickUploadIntent() {
-    // Simple, safe MVP: explicit user choice (no implicit KB pollution)
-    const choice = window.prompt(
-      "Destino do documento:\n1 = Apenas neste chat (temporário)\n2 = Base do agente (persistente)\n3 = Institucional (global)\n\nDigite 1, 2 ou 3:",
-      "1"
-    );
-    const c = String(choice || "1").trim();
-    if (c === "2") return "agent";
-    if (c === "3") return "institutional";
-    return "chat";
-  }
-
-// Upload file
-  async function doUpload(ev) {
-    const f = ev.target.files?.[0];
-    if (!f) return;
-    
-    setUploadProgress(true);
-    setUploadStatus("Enviando...");
-    
-    try {
-      const intent = pickUploadIntent();
-      const { data } = await uploadFile(f, { token, org: tenant, agentId, threadId: threadId || null, intent });
-      setUploadStatus(`✅ ${data.filename} (${data.extracted_chars} chars) → ${intent}`);
-      setTimeout(() => setUploadStatus(""), 5000);
-    } catch (e) {
-      setUploadStatus(`❌ ${e.message}`);
-    } finally {
-      setUploadProgress(false);
-      ev.target.value = "";
-    }
-  }
-
-  // Logout
-  function logout() {
+  function doLogout() {
     clearSession();
     nav("/auth");
   }
 
-  // Filter threads by search
-  const filteredThreads = threads.filter(t => 
-    !searchQuery || t.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const styles = {
+    layout: {
+      display: "flex",
+      height: "100vh",
+      background: "radial-gradient(1200px 700px at 30% -10%, rgba(124,92,255,0.25), transparent 60%), linear-gradient(180deg, #05060a, #03030a)",
+      color: "#fff",
+      fontFamily: "system-ui",
+    },
+    sidebar: {
+      width: "320px",
+      borderRight: "1px solid rgba(255,255,255,0.08)",
+      display: "flex",
+      flexDirection: "column",
+      padding: "16px",
+      gap: "12px",
+    },
+    brand: { fontSize: "18px", fontWeight: 800, letterSpacing: "-0.02em" },
+    badge: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "8px",
+      padding: "6px 10px",
+      borderRadius: "999px",
+      fontSize: "12px",
+      border: "1px solid rgba(255,255,255,0.1)",
+      background: "rgba(255,255,255,0.04)",
+      color: "rgba(255,255,255,0.8)",
+    },
+    topRow: { display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" },
+    newThreadBtn: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "8px",
+      padding: "10px 12px",
+      borderRadius: "14px",
+      border: "1px solid rgba(255,255,255,0.1)",
+      background: "rgba(255,255,255,0.05)",
+      color: "#fff",
+      cursor: "pointer",
+    },
+    threads: { flex: 1, overflowY: "auto", padding: "0 8px" },
+    emptyThreads: { padding: "20px", textAlign: "center", color: "rgba(255,255,255,0.3)", fontSize: "13px" },
+    threadItem: {
+      display: "flex",
+      alignItems: "center",
+      gap: "10px",
+      width: "100%",
+      padding: "12px",
+      background: "transparent",
+      border: "none",
+      borderRadius: "10px",
+      color: "rgba(255,255,255,0.7)",
+      fontSize: "13px",
+      cursor: "pointer",
+      textAlign: "left",
+      marginBottom: "4px",
+      transition: "background 0.2s",
+    },
+    threadItemActive: { background: "rgba(255,255,255,0.1)", color: "#fff" },
+    threadTitle: { flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" },
+    threadEditBtn: {
+      border: "none",
+      background: "transparent",
+      color: "rgba(255,255,255,0.55)",
+      padding: "4px",
+      borderRadius: "8px",
+      cursor: "pointer",
+    },
+    userSection: {
+      padding: "16px",
+      borderTop: "1px solid rgba(255,255,255,0.08)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: "10px",
+    },
+    userInfo: { display: "flex", alignItems: "center", gap: "10px" },
+    userAvatar: {
+      width: "36px",
+      height: "36px",
+      borderRadius: "50%",
+      background: "linear-gradient(135deg, #7c5cff 0%, #35d0ff 100%)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontWeight: 800,
+    },
+    userDetails: { display: "flex", flexDirection: "column" },
+    userName: { fontSize: "13px", fontWeight: 700 },
+    userEmail: { fontSize: "12px", color: "rgba(255,255,255,0.55)" },
+    userActions: { display: "flex", alignItems: "center", gap: "8px" },
+    iconBtn: {
+      width: "36px",
+      height: "36px",
+      borderRadius: "12px",
+      border: "1px solid rgba(255,255,255,0.1)",
+      background: "rgba(255,255,255,0.05)",
+      color: "#fff",
+      cursor: "pointer",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
 
-  // Format timestamp
-  function formatDateTime(ts) {
-    const d = new Date(ts * 1000);
-    // Always show date + time for clear auditability
-    const date = d.toLocaleDateString("pt-BR");
-    const time = d.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
-    return `${date} ${time}`;
-  }
+    main: { flex: 1, display: "flex", flexDirection: "column" },
+    topbar: {
+      padding: "16px 18px",
+      borderBottom: "1px solid rgba(255,255,255,0.08)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: "10px",
+    },
+    topbarLeft: { display: "flex", alignItems: "center", gap: "10px" },
+    title: { fontSize: "16px", fontWeight: 900 },
+    health: { fontSize: "12px", color: "rgba(255,255,255,0.6)" },
+    chatArea: { flex: 1, overflowY: "auto", padding: "16px 18px" },
+    messageRow: { display: "flex", marginBottom: "12px" },
+    messageBubble: {
+      maxWidth: "820px",
+      padding: "12px 12px",
+      borderRadius: "16px",
+      border: "1px solid rgba(255,255,255,0.1)",
+      background: "rgba(255,255,255,0.04)",
+    },
+    userBubble: { background: "rgba(124,92,255,0.12)", border: "1px solid rgba(124,92,255,0.25)" },
+    assistantBubble: { background: "rgba(255,255,255,0.04)" },
+    messageContent: { whiteSpace: "pre-wrap", lineHeight: 1.45, fontSize: "14px" },
+    messageTime: { marginTop: "8px", fontSize: "11px", color: "rgba(255,255,255,0.55)" },
 
-  useEffect(() => {
-    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) { setSpeechSupported(false); return; }
-    setSpeechSupported(true);
-    const rec = new SR();
-    rec.lang = "pt-BR";
-    rec.interimResults = true;
-    rec.continuous = false;
+    uploadStatus: {
+      padding: "10px 18px",
+      fontSize: "13px",
+      color: "rgba(255,255,255,0.85)",
+      borderTop: "1px solid rgba(255,255,255,0.08)",
+      background: "rgba(255,255,255,0.03)",
+    },
 
-    rec.onresult = (event) => {
-      let finalText = "";
-      let interimText = "";
-
-      for (let i = event.resultIndex; i < event.results.length; i++) {
-        const res = event.results[i];
-        const chunk = (res[0]?.transcript || "").trim();
-        if (!chunk) continue;
-        if (res.isFinal) finalText += (finalText ? " " : "") + chunk;
-        else interimText += (interimText ? " " : "") + chunk;
-      }
-
-      if (finalText) {
-        baseTextRef.current = (baseTextRef.current ? baseTextRef.current + " " : "") + finalText;
-        interimTextRef.current = "";
-        setText(baseTextRef.current.trim());
-      } else {
-        interimTextRef.current = interimText;
-        setText((baseTextRef.current + " " + interimText).trim());
-      }
-    };
-
-    rec.onend = () => setListening(false);
-    rec.onerror = () => setListening(false);
-
-    recogRef.current = rec;
-  }, []);
-
-  const toggleMic = () => {
-    const rec = recogRef.current;
-    if (!rec) return;
-    if (listening) {
-      try { rec.stop(); } catch {}
-      setListening(false);
-      return;
-    }
-    try {
-      baseTextRef.current = text || "";
-      interimTextRef.current = "";
-      setListening(true);
-      rec.start();
-    } catch {
-      setListening(false);
-    }
+    composerContainer: { padding: "14px 18px", borderTop: "1px solid rgba(255,255,255,0.08)" },
+    composer: {
+      display: "flex",
+      alignItems: "flex-end",
+      gap: "10px",
+      padding: "10px",
+      borderRadius: "18px",
+      border: "1px solid rgba(255,255,255,0.12)",
+      background: "rgba(255,255,255,0.04)",
+    },
+    attachBtn: {
+      width: "42px",
+      height: "42px",
+      borderRadius: "14px",
+      border: "1px solid rgba(255,255,255,0.1)",
+      background: "rgba(255,255,255,0.05)",
+      color: "#fff",
+      cursor: "pointer",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      opacity: uploadProgress ? 0.6 : 1,
+    },
+    textarea: {
+      flex: 1,
+      minHeight: "42px",
+      maxHeight: "180px",
+      resize: "none",
+      background: "transparent",
+      border: "none",
+      outline: "none",
+      color: "#fff",
+      fontSize: "14px",
+      lineHeight: 1.4,
+      padding: "10px 8px",
+    },
+    micBtn: {
+      width: "42px",
+      height: "42px",
+      borderRadius: "14px",
+      border: "1px solid rgba(255,255,255,0.1)",
+      background: listening ? "rgba(53,208,255,0.15)" : "rgba(255,255,255,0.05)",
+      color: "#fff",
+      cursor: speechSupported ? "pointer" : "not-allowed",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      opacity: speechSupported ? 1 : 0.6,
+    },
+    sendBtn: {
+      width: "42px",
+      height: "42px",
+      borderRadius: "14px",
+      border: "1px solid rgba(255,255,255,0.1)",
+      background: "rgba(255,255,255,0.05)",
+      color: "#fff",
+      cursor: "pointer",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      opacity: sending ? 0.6 : 1,
+    },
   };
 
   return (
-    <div style={styles.container}>
+    <div style={styles.layout}>
       {/* Sidebar */}
-      <aside style={styles.sidebar}>
-        {/* Header */}
-        <div style={styles.sidebarHeader}>
-          <div style={styles.logoRow}>
-            <img src="/orkio-logo.png" alt="Orkio" style={styles.logo} />
-            <div style={styles.healthBadge}>
-              <span style={{ ...styles.healthDot, background: health === "ok" ? "#10b981" : "#ef4444" }} />
-              {health === "ok" ? "Online" : "Offline"}
+      <div style={styles.sidebar}>
+        <div style={styles.topRow}>
+          <div>
+            <div style={styles.brand}>Orkio</div>
+            <div style={{ marginTop: 6, display: "flex", gap: 8, flexWrap: "wrap" }}>
+              <span style={styles.badge}>org: {tenant}</span>
+              <span style={styles.badge}>{health === "ok" ? "ready" : health}</span>
             </div>
           </div>
+
+          <button style={styles.newThreadBtn} onClick={createThread} title="Nova conversa">
+            <IconPlus /> Novo
+          </button>
         </div>
 
-        {/* New Chat Button */}
-        <button style={styles.newChatBtn} onClick={createThread}>
-          <IconPlus /> Nova conversa
-        </button>
-
-        {/* Agent Selector */}
-        {agents.length > 0 && (
-          <div style={styles.agentSelector}>
-            <label style={styles.agentLabel}>Agente:</label>
-            <select
-              value={agentId}
-              onChange={(e) => {
-                setAgentId(e.target.value);
-                localStorage.setItem('orkio_agent_id', e.target.value);
-              }}
-              style={styles.agentSelect}
-            >
-              <option value="">Default</option>
-              {agents.map(a => (
-                <option key={a.id} value={a.id}>
-                  {a.name}{a.is_default ? ' ⭐' : ''}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
-
-        {/* Search */}
-        <div style={styles.searchContainer}>
-          <IconSearch />
-          <input
-            type="text"
-            placeholder="Buscar conversas..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            style={styles.searchInput}
-          />
-        </div>
-
-        {/* Threads List */}
-        <div style={styles.threadsList}>
-          {filteredThreads.length === 0 ? (
-            <div style={styles.emptyThreads}>Nenhuma conversa ainda</div>
+        <div style={styles.threads}>
+          {threads.length === 0 ? (
+            <div style={styles.emptyThreads}>Nenhuma conversa ainda.</div>
           ) : (
-            filteredThreads.map(t => (
+            threads.map((t) => (
               <button
                 key={t.id}
                 onClick={() => setThreadId(t.id)}
@@ -387,7 +557,10 @@ export default function AppConsole() {
                 <span style={styles.threadTitle}>{t.title}</span>
                 <button
                   style={styles.threadEditBtn}
-                  onClick={(e) => { e.stopPropagation(); renameThread(t.id); }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    renameThread(t.id);
+                  }}
                   title="Renomear conversa"
                 >
                   <IconEdit />
@@ -397,43 +570,45 @@ export default function AppConsole() {
           )}
         </div>
 
-        {/* User Section */}
         <div style={styles.userSection}>
           <div style={styles.userInfo}>
-            <div style={styles.userAvatar}>
-              {(user?.name || user?.email || "U").charAt(0).toUpperCase()}
-            </div>
+            <div style={styles.userAvatar}>{(user?.name || user?.email || "U").charAt(0).toUpperCase()}</div>
             <div style={styles.userDetails}>
               <div style={styles.userName}>{user?.name || "Usuário"}</div>
               <div style={styles.userEmail}>{user?.email || ""}</div>
             </div>
           </div>
+
           <div style={styles.userActions}>
             {isAdmin(user) && (
               <button style={styles.iconBtn} onClick={() => nav("/admin")} title="Admin Console">
                 <IconSettings />
               </button>
             )}
-            <button style={styles.iconBtn} onClick={logout} title="Sair">
+            <button style={styles.iconBtn} onClick={doLogout} title="Sair">
               <IconLogout />
             </button>
           </div>
         </div>
-      </aside>
+      </div>
 
-      {/* Main Chat Area */}
-      <main style={styles.main}>
+      {/* Main */}
+      <div style={styles.main}>
+        <div style={styles.topbar}>
+          <div style={styles.topbarLeft}>
+            <div style={styles.title}>{threads.find((t) => t.id === threadId)?.title || "Conversa"}</div>
+            <div style={styles.health}>@Team / @Orkio / @Chris / @Orion</div>
+          </div>
+        </div>
+
         {/* Messages */}
-        <div style={styles.messagesContainer}>
+        <div style={styles.chatArea}>
           {messages.length === 0 ? (
-            <div style={styles.emptyChat}>
-              <h2 style={styles.emptyChatTitle}>Como posso ajudar?</h2>
-              <p style={styles.emptyChatSubtitle}>
-                Faça upload de documentos (PDF, DOCX) e pergunte sobre o conteúdo.
-              </p>
+            <div style={{ color: "rgba(255,255,255,0.55)", fontSize: "14px", padding: "8px" }}>
+              Nenhuma mensagem ainda. Você pode chamar múltiplos agentes com <b>@Team</b>.
             </div>
           ) : (
-            messages.map(m => (
+            messages.map((m) => (
               <div
                 key={m.id}
                 style={{
@@ -441,17 +616,10 @@ export default function AppConsole() {
                   justifyContent: m.role === "user" ? "flex-end" : "flex-start",
                 }}
               >
-                <div
-                  style={{
-                    ...styles.messageBubble,
-                    ...(m.role === "user" ? styles.userBubble : styles.assistantBubble),
-                  }}
-                >
-                  {m.role === "assistant" ? (
-                    <div style={styles.messageContent}>{renderRichText(m.content)}</div>
-                  ) : (
-                    <div style={styles.messageContent}>{m.content}</div>
-                  )}
+                <div style={{ ...styles.messageBubble, ...(m.role === "user" ? styles.userBubble : styles.assistantBubble) }}>
+                  {/* Texto puro (sem renderRichText) para evitar crash */}
+                  <div style={styles.messageContent}>{m.content}</div>
+
                   {m.role !== "user" && (m.agent_name || m.agent_id) ? (
                     <div style={{ ...styles.messageTime, opacity: 0.9 }}>{`Agente: ${m.agent_name || m.agent_id}`}</div>
                   ) : null}
@@ -463,10 +631,8 @@ export default function AppConsole() {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Upload Status */}
-        {uploadStatus && (
-          <div style={styles.uploadStatus}>{uploadStatus}</div>
-        )}
+        {/* Upload status */}
+        {uploadStatus ? <div style={styles.uploadStatus}>{uploadStatus}</div> : null}
 
         {/* Composer */}
         <div style={styles.composerContainer}>
@@ -478,6 +644,7 @@ export default function AppConsole() {
               accept=".pdf,.docx,.doc,.txt,.md"
               style={{ display: "none" }}
             />
+
             <button
               style={styles.attachBtn}
               onClick={() => fileInputRef.current?.click()}
@@ -486,7 +653,7 @@ export default function AppConsole() {
             >
               <IconPaperclip />
             </button>
-            
+
             <textarea
               ref={textareaRef}
               value={text}
@@ -497,400 +664,18 @@ export default function AppConsole() {
               rows={1}
               disabled={sending}
             />
-            
-            <button
-                  className="ml-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white hover:bg-white/10 disabled:opacity-50 disabled:cursor-not-allowed"
-                  onClick={toggleMic}
-                  disabled={!speechSupported}
-                  title={!speechSupported ? "Navegador não suporta voz→texto" : "Voz para texto"}
-                  aria-label="Microfone"
-                >
-                  {!speechSupported ? "🚫" : (listening ? "🎙️" : "🎤")}
-                </button>
 
-                <button
-              style={{
-                ...styles.sendBtn,
-                opacity: (!text.trim() || sending) ? 0.5 : 1,
-              }}
-              onClick={send}
-              disabled={!text.trim() || sending}
-            >
+            <button style={styles.micBtn} onClick={toggleMic} disabled={!speechSupported} title="Ditado por voz">
+              🎙️
+            </button>
+
+            <button style={styles.sendBtn} onClick={sendMessage} disabled={sending} title="Enviar">
               <IconSend />
             </button>
           </div>
-          <div style={styles.composerHint}>
-            <kbd style={styles.kbd}>Shift</kbd> + <kbd style={styles.kbd}>Enter</kbd> para nova linha
-          </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
 
-// Styles
-const styles = {
-  container: {
-    display: "flex",
-    height: "100vh",
-    background: "#0a0a0f",
-    color: "#e5e5e5",
-    fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-  },
-  
-  // Sidebar
-  sidebar: {
-    width: "280px",
-    borderRight: "1px solid rgba(255,255,255,0.08)",
-    display: "flex",
-    flexDirection: "column",
-    background: "#0f0f14",
-  },
-  sidebarHeader: {
-    padding: "16px",
-    borderBottom: "1px solid rgba(255,255,255,0.08)",
-  },
-  logoRow: {
-    display: "flex",
-    alignItems: "center",
-    gap: "12px",
-  },
-  logo: {
-    height: "44px",
-    width: "auto",
-    display: "block",
-  },
-  logoText: {
-    fontSize: "16px",
-    fontWeight: "700",
-    letterSpacing: "0.5px",
-  },
-  healthBadge: {
-    display: "flex",
-    alignItems: "center",
-    gap: "6px",
-    fontSize: "11px",
-    color: "rgba(255,255,255,0.5)",
-    marginTop: "2px",
-  },
-  healthDot: {
-    width: "6px",
-    height: "6px",
-    borderRadius: "50%",
-  },
-  
-  newChatBtn: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "8px",
-    margin: "16px",
-    padding: "12px",
-    background: "linear-gradient(135deg, #7c5cff 0%, #35d0ff 100%)",
-    color: "#000",
-    border: "none",
-    borderRadius: "12px",
-    fontSize: "14px",
-    fontWeight: "600",
-    cursor: "pointer",
-    transition: "opacity 0.2s",
-  },
-  
-  agentSelector: {
-    margin: "0 16px 12px",
-    padding: "10px 12px",
-    background: "rgba(255,255,255,0.05)",
-    borderRadius: "10px",
-  },
-  agentLabel: {
-    display: "block",
-    fontSize: "11px",
-    color: "rgba(255,255,255,0.5)",
-    marginBottom: "6px",
-    textTransform: "uppercase",
-    letterSpacing: "0.5px",
-  },
-  agentSelect: {
-    width: "100%",
-    padding: "8px 10px",
-    background: "rgba(0,0,0,0.3)",
-    border: "1px solid rgba(255,255,255,0.1)",
-    borderRadius: "8px",
-    color: "#e5e5e5",
-    fontSize: "13px",
-    cursor: "pointer",
-    outline: "none",
-  },
-  
-  searchContainer: {
-    display: "flex",
-    alignItems: "center",
-    gap: "8px",
-    margin: "0 16px 16px",
-    padding: "10px 12px",
-    background: "rgba(255,255,255,0.05)",
-    borderRadius: "10px",
-    color: "rgba(255,255,255,0.4)",
-  },
-  searchInput: {
-    flex: 1,
-    background: "transparent",
-    border: "none",
-    outline: "none",
-    color: "#e5e5e5",
-    fontSize: "13px",
-  },
-  
-  threadsList: {
-    flex: 1,
-    overflowY: "auto",
-    padding: "0 8px",
-  },
-  emptyThreads: {
-    padding: "20px",
-    textAlign: "center",
-    color: "rgba(255,255,255,0.3)",
-    fontSize: "13px",
-  },
-  threadItem: {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    width: "100%",
-    padding: "12px",
-    background: "transparent",
-    border: "none",
-    borderRadius: "10px",
-    color: "rgba(255,255,255,0.7)",
-    fontSize: "13px",
-    cursor: "pointer",
-    textAlign: "left",
-    marginBottom: "4px",
-    transition: "background 0.2s",
-  },
-  threadItemActive: {
-    background: "rgba(255,255,255,0.1)",
-    color: "#fff",
-  },
-  threadTitle: {
-    flex: 1,
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap",
-  },
-  threadEditBtn: {
-    border: "none",
-    background: "transparent",
-    color: "rgba(255,255,255,0.55)",
-    padding: "4px",
-    borderRadius: "8px",
-    cursor: "pointer",
-  },
-
-  
-  userSection: {
-    padding: "16px",
-    borderTop: "1px solid rgba(255,255,255,0.08)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  userInfo: {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-  },
-  userAvatar: {
-    width: "36px",
-    height: "36px",
-    borderRadius: "50%",
-    background: "linear-gradient(135deg, #7c5cff 0%, #35d0ff 100%)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: "14px",
-    fontWeight: "600",
-    color: "#000",
-  },
-  userDetails: {
-    overflow: "hidden",
-  },
-  userName: {
-    fontSize: "13px",
-    fontWeight: "600",
-    color: "#fff",
-  },
-  userEmail: {
-    fontSize: "11px",
-    color: "rgba(255,255,255,0.4)",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap",
-    maxWidth: "120px",
-  },
-  userActions: {
-    display: "flex",
-    gap: "4px",
-  },
-  iconBtn: {
-    padding: "8px",
-    background: "transparent",
-    border: "none",
-    borderRadius: "8px",
-    color: "rgba(255,255,255,0.5)",
-    cursor: "pointer",
-    transition: "background 0.2s, color 0.2s",
-  },
-  
-  // Main
-  main: {
-    flex: 1,
-    display: "flex",
-    flexDirection: "column",
-    background: "#0a0a0f",
-  },
-  
-  messagesContainer: {
-    flex: 1,
-    overflowY: "auto",
-    padding: "24px",
-    display: "flex",
-    flexDirection: "column",
-    gap: "16px",
-  },
-  emptyChat: {
-    flex: 1,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: "center",
-    padding: "40px",
-  },
-  emptyChatLogo: {
-    width: "64px",
-    height: "64px",
-    borderRadius: "16px",
-    marginBottom: "24px",
-    opacity: 0.8,
-  },
-  emptyChatTitle: {
-    fontSize: "24px",
-    fontWeight: "600",
-    color: "#fff",
-    margin: "0 0 8px",
-  },
-  emptyChatSubtitle: {
-    fontSize: "14px",
-    color: "rgba(255,255,255,0.5)",
-    maxWidth: "400px",
-    lineHeight: "1.6",
-  },
-  
-  messageRow: {
-    display: "flex",
-    width: "100%",
-  },
-  messageBubble: {
-    maxWidth: "70%",
-    padding: "14px 18px",
-    borderRadius: "18px",
-    position: "relative",
-  },
-  userBubble: {
-    background: "linear-gradient(135deg, #7c5cff 0%, #6b4fd4 100%)",
-    color: "#fff",
-    borderBottomRightRadius: "4px",
-  },
-  assistantBubble: {
-    background: "rgba(255,255,255,0.08)",
-    color: "#e5e5e5",
-    borderBottomLeftRadius: "4px",
-  },
-  messageContent: {
-    fontSize: "14px",
-    lineHeight: "1.6",
-    whiteSpace: "pre-wrap",
-    wordBreak: "break-word",
-  },
-  richH1: { fontSize: "18px", fontWeight: 800, marginBottom: "6px" },
-  richH2: { fontSize: "16px", fontWeight: 800, marginBottom: "6px" },
-  richH3: { fontSize: "14px", fontWeight: 800, marginBottom: "6px" },
-  richP: { lineHeight: 1.5, marginBottom: "6px" },
-  richHr: { border: "none", borderTop: "1px solid rgba(255,255,255,0.12)", margin: "10px 0" },
-  richList: { paddingLeft: "18px", margin: "6px 0 10px 0" },
-  richListItem: { margin: "3px 0", lineHeight: 1.45 },
-
-  messageTime: {
-    fontSize: "10px",
-    color: "rgba(255,255,255,0.4)",
-    marginTop: "6px",
-    textAlign: "right",
-  },
-  
-  uploadStatus: {
-    padding: "10px 24px",
-    fontSize: "13px",
-    color: "rgba(255,255,255,0.7)",
-    background: "rgba(255,255,255,0.05)",
-    borderTop: "1px solid rgba(255,255,255,0.08)",
-  },
-  
-  // Composer
-  composerContainer: {
-    padding: "16px 24px 24px",
-    borderTop: "1px solid rgba(255,255,255,0.08)",
-  },
-  composer: {
-    display: "flex",
-    alignItems: "flex-end",
-    gap: "12px",
-    padding: "12px 16px",
-    background: "rgba(255,255,255,0.05)",
-    borderRadius: "16px",
-    border: "1px solid rgba(255,255,255,0.1)",
-  },
-  attachBtn: {
-    padding: "10px",
-    background: "transparent",
-    border: "none",
-    borderRadius: "10px",
-    color: "rgba(255,255,255,0.5)",
-    cursor: "pointer",
-    transition: "background 0.2s, color 0.2s",
-  },
-  textarea: {
-    flex: 1,
-    background: "transparent",
-    border: "none",
-    outline: "none",
-    color: "#e5e5e5",
-    fontSize: "14px",
-    lineHeight: "1.5",
-    resize: "none",
-    maxHeight: "200px",
-    padding: "6px 0",
-  },
-  sendBtn: {
-    padding: "10px",
-    background: "linear-gradient(135deg, #7c5cff 0%, #35d0ff 100%)",
-    border: "none",
-    borderRadius: "10px",
-    color: "#000",
-    cursor: "pointer",
-    transition: "opacity 0.2s",
-  },
-  composerHint: {
-    marginTop: "8px",
-    fontSize: "11px",
-    color: "rgba(255,255,255,0.3)",
-    textAlign: "center",
-  },
-  kbd: {
-    display: "inline-block",
-    padding: "2px 6px",
-    background: "rgba(255,255,255,0.1)",
-    borderRadius: "4px",
-    fontSize: "10px",
-  },
-};
